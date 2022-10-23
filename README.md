@@ -21,7 +21,7 @@ $ sudo apt install python3 python3-pip openjdk-11-jdk jq
 We'll install the python packages dependancies in a `virtualenv`:
 
 ```bash
-$ # Run this in the root folder of the project
+$ # Run this in the root folder of the Github cloned repository
 $ python3 -m venv ./venv
 $ source ./venv/bin/activate
 $ pip install -r ./requirements.txt
