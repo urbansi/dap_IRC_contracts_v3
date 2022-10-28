@@ -53,7 +53,7 @@ public class MRPRO_Token_V2_1 implements IRC2, IMRPRO_Token_V2_1 {
   // DB Variables
   // ================================================
   final VarDB<BigInteger> _total_supply = Context.newVarDB("total_supply", BigInteger.class);
-  final VarDB<Integer> _decimals = Context.newVarDB("decimals", Integer.class);
+  final VarDB<BigInteger> _decimals = Context.newVarDB("decimals", BigInteger.class);
   final DictDB<Address, BigInteger> _balances = Context.newDictDB("balances", BigInteger.class);
   
   // ================================================
@@ -65,7 +65,7 @@ public class MRPRO_Token_V2_1 implements IRC2, IMRPRO_Token_V2_1 {
     }
 
     if (this._decimals.get() == null) {
-      this._decimals.set(_decimals);
+      this._decimals.set(BigInteger.valueOf(_decimals));
     }
   }
 
@@ -81,7 +81,7 @@ public class MRPRO_Token_V2_1 implements IRC2, IMRPRO_Token_V2_1 {
 
   @External(readonly = true)
   public BigInteger decimals() {
-    return BigInteger.valueOf(this._decimals.get());
+    return this._decimals.get();
   }
 
   @External(readonly = true)
