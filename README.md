@@ -73,3 +73,23 @@ Here's what you'll need to execute for updating the Python scripts on MainNet :
 ```
 
 This command will update the Python DAP Tokens contracts on MainNet with their Java contracts equivalent.
+
+## How to deploy the Java contracts from scratch on MainNet
+
+The following scripts are used in a similar manner:
+
+```bash
+$ ./scripts/scenario/deploy/<script>.sh <network>
+```
+
+Here's what you'll need to execute for updating the Python scripts on MainNet :
+
+```bash
+./scripts/scenario/deploy/1.deploy-CRI10X_Token_V2.sh mainnet
+./scripts/scenario/deploy/2.deploy-EURD_Token_V2.sh mainnet
+./scripts/scenario/deploy/3.deploy-LEND5_Token_V2.sh mainnet
+./scripts/scenario/deploy/4.deploy-MRPRO_Token_V2.1.sh mainnet
+./scripts/scenario/deploy/5.deploy-MRS_Token_V2.sh mainnet
+```
+
+This command will deploy the Java DAP Tokens contracts on MainNet.
